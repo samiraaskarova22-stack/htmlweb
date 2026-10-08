@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A review of HTML tags: definitions, attributes and examples.">
+  <title>Text Formatting Tags — HTML Review</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="logo" href="index.html">&lt;html-review/&gt;</a>
+      <span class="motto">HTML tags, reviewed</span>
+    </div>
+    <nav class="container">
+      <ul class="nav-list">
+          <li><a class="nav-pill" href="index.html">Home</a></li>
+          <li><a class="nav-pill active" href="text.html">Text</a></li>
+          <li><a class="nav-pill" href="links.html">Links & Media</a></li>
+          <li><a class="nav-pill" href="lists.html">Lists</a></li>
+          <li><a class="nav-pill" href="tables.html">Tables</a></li>
+          <li><a class="nav-pill" href="forms.html">Forms</a></li>
+          <li><a class="nav-pill" href="multimedia.html">Multimedia</a></li>
+          <li><a class="nav-pill" href="semantic.html">Semantic</a></li>
+          <li><a class="nav-pill" href="metadata.html">Metadata</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="container page-main">
+    <h1 class="page-title">Text Formatting Tags</h1>
+    <section class="lesson-card">
+      <h2 class="tag-title">&lt;h1–h6&gt;</h2>
+      <div class="block">
+        <p class="kicker">Definition</p>
+        <p class="def">Headings of decreasing importance, from h1 (main title) to h6 (smallest). Used to structure the page outline.</p>
+      </div>
+
+      <div class="demo-grid">
+        <div>
+          <p class="kicker kicker-green">Example (code)</p>
+          <pre class="code"><code>&lt;h1&gt;Main Title&lt;/h1&gt;
+&lt;h2&gt;Section Title&lt;/h2&gt;</code></pre>
+        </div>
+        <div>
+          <p class="kicker kicker-green">Example (result)</p>
+          <div class="result"><h2 style="font-size:22px;margin:0 0 6px">Main Title</h2><h3 style="font-size:17px;margin:0">Section Title</h3></div>
+        </div>
+      </div>
+    </section>
+    <section class="lesson-card">
+      <h2 class="tag-title">&lt;p&gt;</h2>
+      <div class="block">
+        <p class="kicker">Definition</p>
+        <p class="def">Defines a paragraph of text — a block-level container for a chunk of content.</p>
+      </div>
+
+      <div class="demo-grid">
+        <div>
+          <p class="kicker kicker-green">Example (code)</p>
+          <pre class="code"><code>&lt;p&gt;This is a paragraph of text.&lt;/p&gt;</code></pre>
+        </div>
+        <div>
+          <p class="kicker kicker-green">Example (result)</p>
+          <div class="result"><p style="margin:0">This is a paragraph of text.</p></div>
+        </div>
+      </div>
+    </section>
+    <section class="lesson-card">
+      <h2 class="tag-title">&lt;strong / em&gt;</h2>
+      <div class="block">
+        <p class="kicker">Definition</p>
+        <p class="def">strong marks text as important (shown bold); em marks text with stress emphasis (shown italic).</p>
+      </div>
+
+      <div class="demo-grid">
+        <div>
+          <p class="kicker kicker-green">Example (code)</p>
+          <pre class="code"><code>&lt;strong&gt;Important&lt;/strong&gt; and &lt;em&gt;emphasized&lt;/em&gt; text.</code></pre>
+        </div>
+        <div>
+          <p class="kicker kicker-green">Example (result)</p>
+          <div class="result"><p style="margin:0"><strong>Important</strong> and <em>emphasized</em> text.</p></div>
+        </div>
+      </div>
+    </section>
+    <section class="lesson-card">
+      <h2 class="tag-title">&lt;span&gt;</h2>
+      <div class="block">
+        <p class="kicker">Definition</p>
+        <p class="def">An inline, generic container with no semantic meaning — used to style or target a piece of text.</p>
+      </div>
+      <div class="block">
+        <p class="kicker kicker-green">Attributes</p>
+        <table class="attr-table">
+          <thead><tr><th>Attribute</th><th>Role</th></tr></thead>
+          <tbody>
+          <tr><td class="attr">class</td><td>Attaches a CSS class to style the span.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="demo-grid">
+        <div>
+          <p class="kicker kicker-green">Example (code)</p>
+          <pre class="code"><code>&lt;p&gt;Some &lt;span class="highlight"&gt;highlighted&lt;/span&gt; text.&lt;/p&gt;</code></pre>
+        </div>
+        <div>
+          <p class="kicker kicker-green">Example (result)</p>
+          <div class="result"><p style="margin:0">Some <span style="color:#0055FF;font-weight:600">highlighted</span> text.</p></div>
+        </div>
+      </div>
+    </section>
+    <section class="lesson-card">
+      <h2 class="tag-title">&lt;br / hr&gt;</h2>
+      <div class="block">
+        <p class="kicker">Definition</p>
+        <p class="def">br inserts a single line break inside text; hr draws a horizontal rule to separate content.</p>
+      </div>
+
+      <div class="demo-grid">
+        <div>
+          <p class="kicker kicker-green">Example (code)</p>
+          <pre class="code"><code>Line one&lt;br&gt;
+Line two
+&lt;hr&gt;</code></pre>
+        </div>
+        <div>
+          <p class="kicker kicker-green">Example (result)</p>
+          <div class="result"><p style="margin:0">Line one<br>Line two</p><hr style="border:none;border-top:1px solid #ccc;margin:8px 0 0"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <p class="motto">html-review — a static-style tag reference</p>
+      <p class="motto">index · text · links · lists · tables · forms · media · semantic · metadata</p>
+    </div>
+  </footer>
+</body>
+</html>

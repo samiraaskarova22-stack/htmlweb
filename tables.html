@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A review of HTML tags: definitions, attributes and examples.">
+  <title>Tables — HTML Review</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="logo" href="index.html">&lt;html-review/&gt;</a>
+      <span class="motto">HTML tags, reviewed</span>
+    </div>
+    <nav class="container">
+      <ul class="nav-list">
+          <li><a class="nav-pill" href="index.html">Home</a></li>
+          <li><a class="nav-pill" href="text.html">Text</a></li>
+          <li><a class="nav-pill" href="links.html">Links & Media</a></li>
+          <li><a class="nav-pill" href="lists.html">Lists</a></li>
+          <li><a class="nav-pill active" href="tables.html">Tables</a></li>
+          <li><a class="nav-pill" href="forms.html">Forms</a></li>
+          <li><a class="nav-pill" href="multimedia.html">Multimedia</a></li>
+          <li><a class="nav-pill" href="semantic.html">Semantic</a></li>
+          <li><a class="nav-pill" href="metadata.html">Metadata</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="container page-main">
+    <h1 class="page-title">Tables</h1>
+    <section class="lesson-card">
+      <h2 class="tag-title">&lt;table / tr / td&gt;</h2>
+      <div class="block">
+        <p class="kicker">Definition</p>
+        <p class="def">table defines a data table; each row is a tr, and each cell inside a row is a td.</p>
+      </div>
+
+      <div class="demo-grid">
+        <div>
+          <p class="kicker kicker-green">Example (code)</p>
+          <pre class="code"><code>&lt;table&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Row 1, Col 1&lt;/td&gt;
+    &lt;td&gt;Row 1, Col 2&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+        </div>
+        <div>
+          <p class="kicker kicker-green">Example (result)</p>
+          <div class="result"><table style="border-collapse:collapse;font-size:13px"><tr><td style="border:1px solid #ccc;padding:4px 8px">Row 1, Col 1</td><td style="border:1px solid #ccc;padding:4px 8px">Row 1, Col 2</td></tr></table></div>
+        </div>
+      </div>
+    </section>
+    <section class="lesson-card">
+      <h2 class="tag-title">&lt;th&gt;</h2>
+      <div class="block">
+        <p class="kicker">Definition</p>
+        <p class="def">Defines a header cell, shown bold and centered by default, used for column or row titles.</p>
+      </div>
+      <div class="block">
+        <p class="kicker kicker-green">Attributes</p>
+        <table class="attr-table">
+          <thead><tr><th>Attribute</th><th>Role</th></tr></thead>
+          <tbody>
+          <tr><td class="attr">scope</td><td>Declares whether the header applies to a col or row.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="demo-grid">
+        <div>
+          <p class="kicker kicker-green">Example (code)</p>
+          <pre class="code"><code>&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Attribute&lt;/th&gt;
+    &lt;th&gt;Role&lt;/th&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+        </div>
+        <div>
+          <p class="kicker kicker-green">Example (result)</p>
+          <div class="result"><table style="border-collapse:collapse;font-size:13px"><tr><th style="border:1px solid #ccc;padding:4px 8px;background:#FAFAFA">Attribute</th><th style="border:1px solid #ccc;padding:4px 8px;background:#FAFAFA">Role</th></tr></table></div>
+        </div>
+      </div>
+    </section>
+    <section class="lesson-card">
+      <h2 class="tag-title">&lt;thead / tbody&gt;</h2>
+      <div class="block">
+        <p class="kicker">Definition</p>
+        <p class="def">thead groups the header row(s); tbody groups the main data rows — useful for styling and semantics.</p>
+      </div>
+
+      <div class="demo-grid">
+        <div>
+          <p class="kicker kicker-green">Example (code)</p>
+          <pre class="code"><code>&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;&lt;th&gt;Name&lt;/th&gt;&lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;&lt;td&gt;Ana&lt;/td&gt;&lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+        </div>
+        <div>
+          <p class="kicker kicker-green">Example (result)</p>
+          <div class="result"><table style="border-collapse:collapse;font-size:13px"><thead><tr><th style="border:1px solid #ccc;padding:4px 8px;background:#FAFAFA">Name</th></tr></thead><tbody><tr><td style="border:1px solid #ccc;padding:4px 8px">Ana</td></tr></tbody></table></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <p class="motto">html-review — a static-style tag reference</p>
+      <p class="motto">index · text · links · lists · tables · forms · media · semantic · metadata</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A review of HTML tags: definitions, attributes and examples.">
+  <title>Multimedia — HTML Review</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="logo" href="index.html">&lt;html-review/&gt;</a>
+      <span class="motto">HTML tags, reviewed</span>
+    </div>
+    <nav class="container">
+      <ul class="nav-list">
+          <li><a class="nav-pill" href="index.html">Home</a></li>
+          <li><a class="nav-pill" href="text.html">Text</a></li>
+          <li><a class="nav-pill" href="links.html">Links & Media</a></li>
+          <li><a class="nav-pill" href="lists.html">Lists</a></li>
+          <li><a class="nav-pill" href="tables.html">Tables</a></li>
+          <li><a class="nav-pill" href="forms.html">Forms</a></li>
+          <li><a class="nav-pill active" href="multimedia.html">Multimedia</a></li>
+          <li><a class="nav-pill" href="semantic.html">Semantic</a></li>
+          <li><a class="nav-pill" href="metadata.html">Metadata</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="container page-main">
+    <h1 class="page-title">Multimedia</h1>
+    <section class="lesson-card">
+      <h2 class="tag-title">&lt;video&gt;</h2>
+      <div class="block">
+        <p class="kicker">Definition</p>
+        <p class="def">Embeds a video player directly in the page, with native browser controls.</p>
+      </div>
+      <div class="block">
+        <p class="kicker kicker-green">Attributes</p>
+        <table class="attr-table">
+          <thead><tr><th>Attribute</th><th>Role</th></tr></thead>
+          <tbody>
+          <tr><td class="attr">src</td><td>Path to the video file.</td></tr>
+          <tr><td class="attr">controls</td><td>Shows play/pause/volume controls.</td></tr>
+          <tr><td class="attr">autoplay</td><td>Starts playback automatically (often muted).</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="demo-grid">
+        <div>
+          <p class="kicker kicker-green">Example (code)</p>
+          <pre class="code"><code>&lt;video src="images/clip.mp4" controls width="240"&gt;&lt;/video&gt;</code></pre>
+        </div>
+        <div>
+          <p class="kicker kicker-green">Example (result)</p>
+          <div class="result"><div style="width:160px;height:96px;background:rgba(15,15,15,.9);border-radius:6px;display:flex;align-items:center;justify-content:center;color:#fff;font-family:monospace;font-size:12px">▶ video</div></div>
+        </div>
+      </div>
+    </section>
+    <section class="lesson-card">
+      <h2 class="tag-title">&lt;audio&gt;</h2>
+      <div class="block">
+        <p class="kicker">Definition</p>
+        <p class="def">Embeds a sound or music player with native controls.</p>
+      </div>
+      <div class="block">
+        <p class="kicker kicker-green">Attributes</p>
+        <table class="attr-table">
+          <thead><tr><th>Attribute</th><th>Role</th></tr></thead>
+          <tbody>
+          <tr><td class="attr">src</td><td>Path to the audio file.</td></tr>
+          <tr><td class="attr">controls</td><td>Shows the play/volume controls.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="demo-grid">
+        <div>
+          <p class="kicker kicker-green">Example (code)</p>
+          <pre class="code"><code>&lt;audio src="images/sound.mp3" controls&gt;&lt;/audio&gt;</code></pre>
+        </div>
+        <div>
+          <p class="kicker kicker-green">Example (result)</p>
+          <div class="result"><div style="max-width:220px;height:36px;border:1px solid #ccc;border-radius:99px;display:flex;align-items:center;padding:0 12px;font-family:monospace;font-size:12px;color:rgba(15,15,15,.6)">♪ audio controls</div></div>
+        </div>
+      </div>
+    </section>
+    <section class="lesson-card">
+      <h2 class="tag-title">&lt;iframe&gt;</h2>
+      <div class="block">
+        <p class="kicker">Definition</p>
+        <p class="def">Embeds another HTML document inside the current page, such as a map or an external video.</p>
+      </div>
+      <div class="block">
+        <p class="kicker kicker-green">Attributes</p>
+        <table class="attr-table">
+          <thead><tr><th>Attribute</th><th>Role</th></tr></thead>
+          <tbody>
+          <tr><td class="attr">src</td><td>URL of the page to embed.</td></tr>
+          <tr><td class="attr">width / height</td><td>Sets the size of the embedded frame.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="demo-grid">
+        <div>
+          <p class="kicker kicker-green">Example (code)</p>
+          <pre class="code"><code>&lt;iframe src="https://example.com" width="240" height="120"&gt;&lt;/iframe&gt;</code></pre>
+        </div>
+        <div>
+          <p class="kicker kicker-green">Example (result)</p>
+          <div class="result"><div style="width:160px;height:80px;border:1px solid #ccc;border-radius:6px;display:flex;align-items:center;justify-content:center;font-family:monospace;font-size:12px;color:rgba(15,15,15,.5)">iframe</div></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <p class="motto">html-review — a static-style tag reference</p>
+      <p class="motto">index · text · links · lists · tables · forms · media · semantic · metadata</p>
+    </div>
+  </footer>
+</body>
+</html>

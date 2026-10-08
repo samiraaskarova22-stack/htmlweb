@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A review of HTML tags: definitions, attributes and examples.">
+  <title>Forms — HTML Review</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="logo" href="index.html">&lt;html-review/&gt;</a>
+      <span class="motto">HTML tags, reviewed</span>
+    </div>
+    <nav class="container">
+      <ul class="nav-list">
+          <li><a class="nav-pill" href="index.html">Home</a></li>
+          <li><a class="nav-pill" href="text.html">Text</a></li>
+          <li><a class="nav-pill" href="links.html">Links & Media</a></li>
+          <li><a class="nav-pill" href="lists.html">Lists</a></li>
+          <li><a class="nav-pill" href="tables.html">Tables</a></li>
+          <li><a class="nav-pill active" href="forms.html">Forms</a></li>
+          <li><a class="nav-pill" href="multimedia.html">Multimedia</a></li>
+          <li><a class="nav-pill" href="semantic.html">Semantic</a></li>
+          <li><a class="nav-pill" href="metadata.html">Metadata</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="container page-main">
+    <h1 class="page-title">Forms</h1>
+    <section class="lesson-card">
+      <h2 class="tag-title">&lt;form&gt;</h2>
+      <div class="block">
+        <p class="kicker">Definition</p>
+        <p class="def">Wraps a group of input controls that are submitted together to a server.</p>
+      </div>
+      <div class="block">
+        <p class="kicker kicker-green">Attributes</p>
+        <table class="attr-table">
+          <thead><tr><th>Attribute</th><th>Role</th></tr></thead>
+          <tbody>
+          <tr><td class="attr">action</td><td>The URL the form data is sent to.</td></tr>
+          <tr><td class="attr">method</td><td>HTTP method used to send data, e.g. get or post.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="demo-grid">
+        <div>
+          <p class="kicker kicker-green">Example (code)</p>
+          <pre class="code"><code>&lt;form action="/submit" method="post"&gt;
+  ...
+&lt;/form&gt;</code></pre>
+        </div>
+        <div>
+          <p class="kicker kicker-green">Example (result)</p>
+          <div class="result"><span style="color:rgba(15,15,15,.6);font-size:13px">A container — nothing visible by itself.</span></div>
+        </div>
+      </div>
+    </section>
+    <section class="lesson-card">
+      <h2 class="tag-title">&lt;input&gt;</h2>
+      <div class="block">
+        <p class="kicker">Definition</p>
+        <p class="def">A single-line form control; its type attribute decides whether it's text, a checkbox, a date, etc.</p>
+      </div>
+      <div class="block">
+        <p class="kicker kicker-green">Attributes</p>
+        <table class="attr-table">
+          <thead><tr><th>Attribute</th><th>Role</th></tr></thead>
+          <tbody>
+          <tr><td class="attr">type</td><td>Kind of control: text, email, checkbox, radio…</td></tr>
+          <tr><td class="attr">name</td><td>Key used to identify the value when submitted.</td></tr>
+          <tr><td class="attr">placeholder</td><td>Hint text shown when the field is empty.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="demo-grid">
+        <div>
+          <p class="kicker kicker-green">Example (code)</p>
+          <pre class="code"><code>&lt;input type="text" name="username" placeholder="Your name"&gt;</code></pre>
+        </div>
+        <div>
+          <p class="kicker kicker-green">Example (result)</p>
+          <div class="result"><input type="text" placeholder="Your name" style="border:1px solid #ccc;border-radius:6px;padding:6px 10px;font-size:13px"></div>
+        </div>
+      </div>
+    </section>
+    <section class="lesson-card">
+      <h2 class="tag-title">&lt;label&gt;</h2>
+      <div class="block">
+        <p class="kicker">Definition</p>
+        <p class="def">Attaches a text description to a form control, improving accessibility and clickability.</p>
+      </div>
+      <div class="block">
+        <p class="kicker kicker-green">Attributes</p>
+        <table class="attr-table">
+          <thead><tr><th>Attribute</th><th>Role</th></tr></thead>
+          <tbody>
+          <tr><td class="attr">for</td><td>Matches the id of the input it describes.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="demo-grid">
+        <div>
+          <p class="kicker kicker-green">Example (code)</p>
+          <pre class="code"><code>&lt;label for="email"&gt;Email&lt;/label&gt;
+&lt;input id="email" type="email"&gt;</code></pre>
+        </div>
+        <div>
+          <p class="kicker kicker-green">Example (result)</p>
+          <div class="result"><div style="display:flex;align-items:center;gap:8px"><label for="email-demo" style="font-size:13px">Email</label><input id="email-demo" type="email" style="border:1px solid #ccc;border-radius:6px;padding:6px 10px;font-size:13px"></div></div>
+        </div>
+      </div>
+    </section>
+    <section class="lesson-card">
+      <h2 class="tag-title">&lt;select / option&gt;</h2>
+      <div class="block">
+        <p class="kicker">Definition</p>
+        <p class="def">select creates a dropdown; each choice inside it is an option.</p>
+      </div>
+      <div class="block">
+        <p class="kicker kicker-green">Attributes</p>
+        <table class="attr-table">
+          <thead><tr><th>Attribute</th><th>Role</th></tr></thead>
+          <tbody>
+          <tr><td class="attr">value</td><td>The value sent for that option when selected.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="demo-grid">
+        <div>
+          <p class="kicker kicker-green">Example (code)</p>
+          <pre class="code"><code>&lt;select name="level"&gt;
+  &lt;option value="beginner"&gt;Beginner&lt;/option&gt;
+  &lt;option value="advanced"&gt;Advanced&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+        </div>
+        <div>
+          <p class="kicker kicker-green">Example (result)</p>
+          <div class="result"><select style="border:1px solid #ccc;border-radius:6px;padding:6px 10px;font-size:13px"><option>Beginner</option><option>Advanced</option></select></div>
+        </div>
+      </div>
+    </section>
+    <section class="lesson-card">
+      <h2 class="tag-title">&lt;button&gt;</h2>
+      <div class="block">
+        <p class="kicker">Definition</p>
+        <p class="def">A clickable control, typically used to submit a form or trigger an action.</p>
+      </div>
+      <div class="block">
+        <p class="kicker kicker-green">Attributes</p>
+        <table class="attr-table">
+          <thead><tr><th>Attribute</th><th>Role</th></tr></thead>
+          <tbody>
+          <tr><td class="attr">type</td><td>submit, reset, or button.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="demo-grid">
+        <div>
+          <p class="kicker kicker-green">Example (code)</p>
+          <pre class="code"><code>&lt;button type="submit"&gt;Send&lt;/button&gt;</code></pre>
+        </div>
+        <div>
+          <p class="kicker kicker-green">Example (result)</p>
+          <div class="result"><button style="background:#0055FF;color:#fff;border:none;border-radius:6px;padding:6px 16px;font-size:13px;cursor:pointer">Send</button></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <p class="motto">html-review — a static-style tag reference</p>
+      <p class="motto">index · text · links · lists · tables · forms · media · semantic · metadata</p>
+    </div>
+  </footer>
+</body>
+</html>

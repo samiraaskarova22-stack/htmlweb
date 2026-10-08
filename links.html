@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A review of HTML tags: definitions, attributes and examples.">
+  <title>Links & Images — HTML Review</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="logo" href="index.html">&lt;html-review/&gt;</a>
+      <span class="motto">HTML tags, reviewed</span>
+    </div>
+    <nav class="container">
+      <ul class="nav-list">
+          <li><a class="nav-pill" href="index.html">Home</a></li>
+          <li><a class="nav-pill" href="text.html">Text</a></li>
+          <li><a class="nav-pill active" href="links.html">Links & Media</a></li>
+          <li><a class="nav-pill" href="lists.html">Lists</a></li>
+          <li><a class="nav-pill" href="tables.html">Tables</a></li>
+          <li><a class="nav-pill" href="forms.html">Forms</a></li>
+          <li><a class="nav-pill" href="multimedia.html">Multimedia</a></li>
+          <li><a class="nav-pill" href="semantic.html">Semantic</a></li>
+          <li><a class="nav-pill" href="metadata.html">Metadata</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="container page-main">
+    <h1 class="page-title" id="top">Links & Images</h1>
+    <section class="lesson-card">
+      <h2 class="tag-title">&lt;a&gt;</h2>
+      <div class="block">
+        <p class="kicker">Definition</p>
+        <p class="def">Creates a hyperlink to another page, section, or external site.</p>
+      </div>
+      <div class="block">
+        <p class="kicker kicker-green">Attributes</p>
+        <table class="attr-table">
+          <thead><tr><th>Attribute</th><th>Role</th></tr></thead>
+          <tbody>
+          <tr><td class="attr">href</td><td>The destination URL or anchor.</td></tr>
+          <tr><td class="attr">target</td><td>Where to open the link, e.g. _blank for a new tab.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="demo-grid">
+        <div>
+          <p class="kicker kicker-green">Example (code)</p>
+          <pre class="code"><code>&lt;a href="https://example.com" target="_blank" rel="noopener noreferrer"&gt;Visit example&lt;/a&gt;</code></pre>
+        </div>
+        <div>
+          <p class="kicker kicker-green">Example (result)</p>
+          <div class="result"><a href="https://example.com" target="_blank" rel="noopener noreferrer" style="color:#0055FF;text-decoration:underline">Visit example</a></div>
+        </div>
+      </div>
+    </section>
+    <section class="lesson-card">
+      <h2 class="tag-title">&lt;img&gt;</h2>
+      <div class="block">
+        <p class="kicker">Definition</p>
+        <p class="def">Embeds an image into the page. Self-closing — it has no closing tag.</p>
+      </div>
+      <div class="block">
+        <p class="kicker kicker-green">Attributes</p>
+        <table class="attr-table">
+          <thead><tr><th>Attribute</th><th>Role</th></tr></thead>
+          <tbody>
+          <tr><td class="attr">src</td><td>Path or URL to the image file.</td></tr>
+          <tr><td class="attr">alt</td><td>Text description shown if the image fails to load.</td></tr>
+          <tr><td class="attr">width / height</td><td>Sets the display size of the image.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="demo-grid">
+        <div>
+          <p class="kicker kicker-green">Example (code)</p>
+          <pre class="code"><code>&lt;img src="images/logo.png" alt="Site logo" width="80"&gt;</code></pre>
+        </div>
+        <div>
+          <p class="kicker kicker-green">Example (result)</p>
+          <div class="result"><div style="width:80px;height:80px;border-radius:6px;background:rgba(0,85,255,.1);border:1px solid rgba(0,85,255,.3);display:flex;align-items:center;justify-content:center;font-family:monospace;font-size:12px;color:#0055FF">img</div></div>
+        </div>
+      </div>
+    </section>
+    <section class="lesson-card">
+      <h2 class="tag-title">&lt;a (anchor link)&gt;</h2>
+      <div class="block">
+        <p class="kicker">Definition</p>
+        <p class="def">A link can also jump to an element on the same page by targeting its id.</p>
+      </div>
+      <div class="block">
+        <p class="kicker kicker-green">Attributes</p>
+        <table class="attr-table">
+          <thead><tr><th>Attribute</th><th>Role</th></tr></thead>
+          <tbody>
+          <tr><td class="attr">href="#id"</td><td>Scrolls to the element with that id.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="demo-grid">
+        <div>
+          <p class="kicker kicker-green">Example (code)</p>
+          <pre class="code"><code>&lt;a href="#top"&gt;Back to top&lt;/a&gt;</code></pre>
+        </div>
+        <div>
+          <p class="kicker kicker-green">Example (result)</p>
+          <div class="result"><a href="#top" style="color:#0055FF;text-decoration:underline">Back to top</a></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <p class="motto">html-review — a static-style tag reference</p>
+      <p class="motto">index · text · links · lists · tables · forms · media · semantic · metadata</p>
+    </div>
+  </footer>
+</body>
+</html>

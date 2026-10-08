@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A review of HTML tags: definitions, attributes and examples.">
+  <title>Semantic & Layout Tags — HTML Review</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="logo" href="index.html">&lt;html-review/&gt;</a>
+      <span class="motto">HTML tags, reviewed</span>
+    </div>
+    <nav class="container">
+      <ul class="nav-list">
+          <li><a class="nav-pill" href="index.html">Home</a></li>
+          <li><a class="nav-pill" href="text.html">Text</a></li>
+          <li><a class="nav-pill" href="links.html">Links & Media</a></li>
+          <li><a class="nav-pill" href="lists.html">Lists</a></li>
+          <li><a class="nav-pill" href="tables.html">Tables</a></li>
+          <li><a class="nav-pill" href="forms.html">Forms</a></li>
+          <li><a class="nav-pill" href="multimedia.html">Multimedia</a></li>
+          <li><a class="nav-pill active" href="semantic.html">Semantic</a></li>
+          <li><a class="nav-pill" href="metadata.html">Metadata</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="container page-main">
+    <h1 class="page-title">Semantic & Layout Tags</h1>
+    <section class="lesson-card">
+      <h2 class="tag-title">&lt;header&gt;</h2>
+      <div class="block">
+        <p class="kicker">Definition</p>
+        <p class="def">Represents introductory content for a page or section — usually a logo, title, and navigation.</p>
+      </div>
+
+      <div class="demo-grid">
+        <div>
+          <p class="kicker kicker-green">Example (code)</p>
+          <pre class="code"><code>&lt;header&gt;
+  &lt;h1&gt;Site Name&lt;/h1&gt;
+  &lt;nav&gt;...&lt;/nav&gt;
+&lt;/header&gt;</code></pre>
+        </div>
+        <div>
+          <p class="kicker kicker-green">Example (result)</p>
+          <div class="result"><div style="border:1px solid #ddd;border-radius:6px;padding:8px 12px;font-family:monospace;font-size:12px">header: logo + nav</div></div>
+        </div>
+      </div>
+    </section>
+    <section class="lesson-card">
+      <h2 class="tag-title">&lt;nav&gt;</h2>
+      <div class="block">
+        <p class="kicker">Definition</p>
+        <p class="def">Marks a block of navigation links, usually the main menu of the site.</p>
+      </div>
+
+      <div class="demo-grid">
+        <div>
+          <p class="kicker kicker-green">Example (code)</p>
+          <pre class="code"><code>&lt;nav&gt;
+  &lt;a href="index.html"&gt;Home&lt;/a&gt;
+  &lt;a href="text.html"&gt;Text&lt;/a&gt;
+&lt;/nav&gt;</code></pre>
+        </div>
+        <div>
+          <p class="kicker kicker-green">Example (result)</p>
+          <div class="result"><div style="border:1px solid #ddd;border-radius:6px;padding:8px 12px;font-family:monospace;font-size:12px">nav: Home · Text</div></div>
+        </div>
+      </div>
+    </section>
+    <section class="lesson-card">
+      <h2 class="tag-title">&lt;main / section / article&gt;</h2>
+      <div class="block">
+        <p class="kicker">Definition</p>
+        <p class="def">main holds the page's primary content (once per page); section groups related content; article is self-contained content like a post.</p>
+      </div>
+
+      <div class="demo-grid">
+        <div>
+          <p class="kicker kicker-green">Example (code)</p>
+          <pre class="code"><code>&lt;main&gt;
+  &lt;section&gt;
+    &lt;article&gt;...&lt;/article&gt;
+  &lt;/section&gt;
+&lt;/main&gt;</code></pre>
+        </div>
+        <div>
+          <p class="kicker kicker-green">Example (result)</p>
+          <div class="result"><div style="border:1px solid #ddd;border-radius:6px;padding:8px 12px;font-family:monospace;font-size:12px">main → section → article</div></div>
+        </div>
+      </div>
+    </section>
+    <section class="lesson-card">
+      <h2 class="tag-title">&lt;aside / footer&gt;</h2>
+      <div class="block">
+        <p class="kicker">Definition</p>
+        <p class="def">aside holds tangential content like a sidebar; footer holds closing information such as copyright or contact links.</p>
+      </div>
+
+      <div class="demo-grid">
+        <div>
+          <p class="kicker kicker-green">Example (code)</p>
+          <pre class="code"><code>&lt;aside&gt;Related links&lt;/aside&gt;
+&lt;footer&gt;&amp;copy; 2026 html-review&lt;/footer&gt;</code></pre>
+        </div>
+        <div>
+          <p class="kicker kicker-green">Example (result)</p>
+          <div class="result"><div style="border:1px solid #ddd;border-radius:6px;padding:8px 12px;font-family:monospace;font-size:12px">aside | footer</div></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <p class="motto">html-review — a static-style tag reference</p>
+      <p class="motto">index · text · links · lists · tables · forms · media · semantic · metadata</p>
+    </div>
+  </footer>
+</body>
+</html>

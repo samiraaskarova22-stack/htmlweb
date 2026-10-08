@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A review of HTML tags: definitions, attributes and examples.">
+  <title>HTML Review — Tag Reference</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="logo" href="index.html">&lt;html-review/&gt;</a>
+      <span class="motto">HTML tags, reviewed</span>
+    </div>
+    <nav class="container">
+      <ul class="nav-list">
+          <li><a class="nav-pill active" href="index.html">Home</a></li>
+          <li><a class="nav-pill" href="text.html">Text</a></li>
+          <li><a class="nav-pill" href="links.html">Links & Media</a></li>
+          <li><a class="nav-pill" href="lists.html">Lists</a></li>
+          <li><a class="nav-pill" href="tables.html">Tables</a></li>
+          <li><a class="nav-pill" href="forms.html">Forms</a></li>
+          <li><a class="nav-pill" href="multimedia.html">Multimedia</a></li>
+          <li><a class="nav-pill" href="semantic.html">Semantic</a></li>
+          <li><a class="nav-pill" href="metadata.html">Metadata</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="container page-main">
+    <div class="hero">
+      <p class="terminal-prompt">$ what do you want to build today?</p>
+      <h1 class="hero-title">The Core Tags<br>of HTML, Reviewed</h1>
+      <p class="hero-sub">A reference built page by page: structure, text, links, lists, tables, forms, multimedia, semantics and metadata — each tag with its definition, attributes and a live example.</p>
+    </div>
+    <section class="lesson-card">
+      <h2 class="tag-title">&lt;!DOCTYPE html&gt;</h2>
+      <div class="block">
+        <p class="kicker">Definition</p>
+        <p class="def">Declares the document as HTML5 so browsers render it in standards mode. It is not a tag with a closing pair — it's the very first line of the file.</p>
+      </div>
+
+      <div class="demo-grid">
+        <div>
+          <p class="kicker kicker-green">Example (code)</p>
+          <pre class="code"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  ...
+&lt;/html&gt;</code></pre>
+        </div>
+        <div>
+          <p class="kicker kicker-green">Example (result)</p>
+          <div class="result"><span style="color:rgba(15,15,15,.6);font-size:13px">No visible output — it only sets the parsing mode.</span></div>
+        </div>
+      </div>
+    </section>
+    <section class="lesson-card">
+      <h2 class="tag-title">&lt;html&gt;</h2>
+      <div class="block">
+        <p class="kicker">Definition</p>
+        <p class="def">The root element that wraps every other element on the page.</p>
+      </div>
+      <div class="block">
+        <p class="kicker kicker-green">Attributes</p>
+        <table class="attr-table">
+          <thead><tr><th>Attribute</th><th>Role</th></tr></thead>
+          <tbody>
+          <tr><td class="attr">lang</td><td>Declares the page's language, e.g. en or fr.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="demo-grid">
+        <div>
+          <p class="kicker kicker-green">Example (code)</p>
+          <pre class="code"><code>&lt;html lang="en"&gt;
+  &lt;head&gt;...&lt;/head&gt;
+  &lt;body&gt;...&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        </div>
+        <div>
+          <p class="kicker kicker-green">Example (result)</p>
+          <div class="result"><span style="color:rgba(15,15,15,.6);font-size:13px">The root container — nothing to display on its own.</span></div>
+        </div>
+      </div>
+    </section>
+    <section class="lesson-card">
+      <h2 class="tag-title">&lt;head&gt;</h2>
+      <div class="block">
+        <p class="kicker">Definition</p>
+        <p class="def">Holds information about the document that isn't shown directly on the page: title, metadata, links to stylesheets.</p>
+      </div>
+
+      <div class="demo-grid">
+        <div>
+          <p class="kicker kicker-green">Example (code)</p>
+          <pre class="code"><code>&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;My Page&lt;/title&gt;
+  &lt;link rel="stylesheet" href="css/style.css"&gt;
+&lt;/head&gt;</code></pre>
+        </div>
+        <div>
+          <p class="kicker kicker-green">Example (result)</p>
+          <div class="result"><span style="color:rgba(15,15,15,.6);font-size:13px">Invisible — sets the browser tab title and loads resources.</span></div>
+        </div>
+      </div>
+    </section>
+    <section class="lesson-card">
+      <h2 class="tag-title">&lt;body&gt;</h2>
+      <div class="block">
+        <p class="kicker">Definition</p>
+        <p class="def">Contains everything that is visible on the page: text, images, links, forms.</p>
+      </div>
+
+      <div class="demo-grid">
+        <div>
+          <p class="kicker kicker-green">Example (code)</p>
+          <pre class="code"><code>&lt;body&gt;
+  &lt;h1&gt;Hello world&lt;/h1&gt;
+&lt;/body&gt;</code></pre>
+        </div>
+        <div>
+          <p class="kicker kicker-green">Example (result)</p>
+          <div class="result"><h1 style="font-size:20px;margin:0">Hello world</h1></div>
+        </div>
+      </div>
+    </section>
+    <div class="page-cards">
+      <p class="kicker">continue the review</p>
+      <div class="cards-grid">
+        <a class="page-card" href="text.html"><p class="card-title">Text Formatting Tags</p><p class="card-desc">h1–h6, p, strong / em…</p></a>
+        <a class="page-card" href="links.html"><p class="card-title">Links & Images</p><p class="card-desc">a, img, a (anchor link)…</p></a>
+        <a class="page-card" href="lists.html"><p class="card-title">Lists</p><p class="card-desc">ul / li, ol / li, dl / dt / dd…</p></a>
+        <a class="page-card" href="tables.html"><p class="card-title">Tables</p><p class="card-desc">table / tr / td, th, thead / tbody…</p></a>
+        <a class="page-card" href="forms.html"><p class="card-title">Forms</p><p class="card-desc">form, input, label…</p></a>
+        <a class="page-card" href="multimedia.html"><p class="card-title">Multimedia</p><p class="card-desc">video, audio, iframe…</p></a>
+        <a class="page-card" href="semantic.html"><p class="card-title">Semantic & Layout Tags</p><p class="card-desc">header, nav, main / section / article…</p></a>
+        <a class="page-card" href="metadata.html"><p class="card-title">Metadata</p><p class="card-desc">title, meta, link…</p></a>
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <p class="motto">html-review — a static-style tag reference</p>
+      <p class="motto">index · text · links · lists · tables · forms · media · semantic · metadata</p>
+    </div>
+  </footer>
+</body>
+</html>
