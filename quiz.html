@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="HTML Tag Reference Quiz.">
+  <title>HTML Review — Quiz</title>
+  <link rel="stylesheet" href="css/style.css">
+  
+  <style>
+    /* CSS Score Calculation Logic (No JavaScript) */
+    body { counter-reset: correct 0 incorrect 0; }
+    
+    input.correct:checked { counter-increment: correct; }
+    input.wrong:checked { counter-increment: incorrect; }
+
+    #results-box { display: none; }
+    
+    #finish-quiz:checked ~ #results-box {
+      display: block;
+      margin-top: 40px;
+      border-color: #4CAF50;
+    }
+    
+    #finish-quiz:checked ~ .lesson-card:not(#results-box) {
+      pointer-events: none;
+      opacity: 0.6;
+    }
+    
+    .score-correct::after { content: counter(correct); font-weight: bold; color: #4CAF50; }
+    .score-incorrect::after { content: counter(incorrect); font-weight: bold; color: #f44336; }
+
+    .btn-terminal {
+      display: inline-block;
+      padding: 12px 24px;
+      margin-top: 20px;
+      background: #1a1a1a;
+      color: #00ff00;
+      font-family: monospace;
+      font-size: 16px;
+      border: 1px solid #00ff00;
+      cursor: pointer;
+      text-transform: lowercase;
+    }
+    
+    .btn-terminal:hover {
+      background: #00ff00;
+      color: #1a1a1a;
+    }
+
+    .quiz-option {
+      display: block;
+      margin: 10px 0;
+      font-size: 15px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="logo" href="index.html">&lt;html-review/&gt;</a>
+      <span class="motto">HTML tags, reviewed</span>
+    </div>
+    <nav class="container">
+      <ul class="nav-list">
+          <li><a class="nav-pill" href="index.html">Home</a></li>
+          <li><a class="nav-pill" href="text.html">Text</a></li>
+          <li><a class="nav-pill" href="links.html">Links & Media</a></li>
+          <li><a class="nav-pill" href="lists.html">Lists</a></li>
+          <li><a class="nav-pill" href="tables.html">Tables</a></li>
+          <li><a class="nav-pill" href="forms.html">Forms</a></li>
+          <li><a class="nav-pill" href="multimedia.html">Multimedia</a></li>
+          <li><a class="nav-pill" href="semantic.html">Semantic</a></li>
+          <li><a class="nav-pill" href="metadata.html">Metadata</a></li>
+          <li><a class="nav-pill active" href="quiz.html">Quiz</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container page-main">
+    <div class="hero">
+      <p class="terminal-prompt">$ initiate knowledge_check.sh</p>
+      <h1 class="hero-title">The Tag Reference<br>Quiz</h1>
+      <p class="hero-sub">Test your memory on HTML structure, tags, and definitions. Select your answers below and execute the script to see your score.</p>
+    </div>
+
+    <form class="quiz-form" action="#" method="get">
+      
+      <!-- Hidden Checkbox that activates the CSS scoring system -->
+      <input type="checkbox" id="finish-quiz" style="display: none;">
+
+      <section class="lesson-card">
+        <h2 class="tag-title">1. &lt;!DOCTYPE html&gt;</h2>
+        <div class="block">
+          <p class="kicker">Question</p>
+          <p class="def">What does the doctype declaration do at the very beginning of the file?</p>
+          
+          <label class="quiz-option"><input type="radio" name="q1" value="A" class="wrong"> It links the main CSS stylesheet to the HTML document.</label>
+          <label class="quiz-option"><input type="radio" name="q1" value="B" class="correct"> It declares the document as HTML5 so browsers render it in standards mode.</label>
+          <label class="quiz-option"><input type="radio" name="q1" value="C" class="wrong"> It closes the HTML document securely.</label>
+        </div>
+      </section>
+      <section class="lesson-card">
+        <h2 class="tag-title">2. &lt;html&gt;</h2>
+        <div class="block">
+          <p class="kicker">Question</p>
+          <p class="def">How is the &lt;html&gt; tag defined in the document structure?</p>
+          
+          <label class="quiz-option"><input type="radio" name="q2" value="A" class="correct"> It is the root element that wraps every other element on the page.</label>
+          <label class="quiz-option"><input type="radio" name="q2" value="B" class="wrong"> It is used to format text onto the screen.</label>
+          <label class="quiz-option"><input type="radio" name="q2" value="C" class="wrong"> It contains only the visible forms and tables.</label>
+        </div>
+      </section>
+
+      <section class="lesson-card">
+        <h2 class="tag-title">3. The lang attribute</h2>
+        <div class="block">
+          <p class="kicker">Question</p>
+          <p class="def">What is the role of the lang attribute when applied to the &lt;html&gt; tag?</p>
+          
+          <label class="quiz-option"><input type="radio" name="q3" value="A" class="wrong"> It translates the page code automatically.</label>
+          <label class="quiz-option"><input type="radio" name="q3" value="B" class="wrong"> It sets the default programming language for scripts.</label>
+          <label class="quiz-option"><input type="radio" name="q3" value="C" class="correct"> It declares the page's language, e.g., en or fr.</label>
+        </div>
+      </section>
+
+      <section class="lesson-card">
+        <h2 class="tag-title">4. &lt;head&gt;</h2>
+        <div class="block">
+          <p class="kicker">Question</p>
+          <p class="def">Which of the following best describes the contents of the &lt;head&gt; tag?</p>
+          
+          <label class="quiz-option"><input type="radio" name="q4" value="A" class="correct"> Holds information not shown directly on the page: title, metadata, and stylesheet links.</label>
+          <label class="quiz-option"><input type="radio" name="q4" value="B" class="wrong"> Contains the main logo and site navigation.</label>
+          <label class="quiz-option"><input type="radio" name="q4" value="C" class="wrong"> Holds everything that is visible on the page.</label>
+        </div>
+      </section>
+
+      <section class="lesson-card">
+        <h2 class="tag-title">5. &lt;body&gt;</h2>
+        <div class="block">
+          <p class="kicker">Question</p>
+          <p class="def">What is the purpose of the &lt;body&gt; tag?</p>
+          
+          <label class="quiz-option"><input type="radio" name="q5" value="A" class="wrong"> It links to external multimedia resources and databases.</label>
+          <label class="quiz-option"><input type="radio" name="q5" value="B" class="correct"> It contains everything that is visible on the page, like text, images, and forms.</label>
+          <label class="quiz-option"><input type="radio" name="q5" value="C" class="wrong"> It sets the parsing mode for the browser tab.</label>
+        </div>
+      </section>
+
+      <section class="lesson-card">
+        <h2 class="tag-title">6. Text Formatting Tags</h2>
+        <div class="block">
+          <p class="kicker">Question</p>
+          <p class="def">Which group of elements is classified under Text Formatting?</p>
+          
+          <label class="quiz-option"><input type="radio" name="q6" value="A" class="wrong"> table / tr / td / th</label>
+          <label class="quiz-option"><input type="radio" name="q6" value="B" class="wrong"> form / input / label</label>
+          <label class="quiz-option"><input type="radio" name="q6" value="C" class="correct"> h1–h6, p, strong, em</label>
+        </div>
+      </section>
+      <section class="lesson-card">
+        <h2 class="tag-title">7. Links & Images</h2>
+        <div class="block">
+          <p class="kicker">Question</p>
+          <p class="def">Which core tags are used to build Links & Images?</p>
+          
+          <label class="quiz-option"><input type="radio" name="q7" value="A" class="correct"> a, img</label>
+          <label class="quiz-option"><input type="radio" name="q7" value="B" class="wrong"> nav, section</label>
+          <label class="quiz-option"><input type="radio" name="q7" value="C" class="wrong"> video, audio</label>
+        </div>
+      </section>
+
+      <section class="lesson-card">
+        <h2 class="tag-title">8. List Tags</h2>
+        <div class="block">
+          <p class="kicker">Question</p>
+          <p class="def">Which combination of tags is used for creating lists?</p>
+          
+          <label class="quiz-option"><input type="radio" name="q8" value="A" class="wrong"> header, nav, main</label>
+          <label class="quiz-option"><input type="radio" name="q8" value="B" class="correct"> ul / li, ol / li, dl / dt / dd</label>
+          <label class="quiz-option"><input type="radio" name="q8" value="C" class="wrong"> title, meta, link</label>
+        </div>
+      </section>
+
+      <section class="lesson-card">
+        <h2 class="tag-title">9. Semantic & Layout</h2>
+        <div class="block">
+          <p class="kicker">Question</p>
+          <p class="def">Which tags are primarily considered Semantic & Layout elements?</p>
+          
+          <label class="quiz-option"><input type="radio" name="q9" value="A" class="correct"> header, nav, main, section, article</label>
+          <label class="quiz-option"><input type="radio" name="q9" value="B" class="wrong"> iframe, video, audio</label>
+          <label class="quiz-option"><input type="radio" name="q9" value="C" class="wrong"> a, img, strong, em</label>
+        </div>
+      </section>
+
+      <section class="lesson-card">
+        <h2 class="tag-title">10. Metadata Tags</h2>
+        <div class="block">
+          <p class="kicker">Question</p>
+          <p class="def">Which group of tags is used specifically for Metadata?</p>
+          
+          <label class="quiz-option"><input type="radio" name="q10" value="A" class="correct"> title, meta, link</label>
+          <label class="quiz-option"><input type="radio" name="q10" value="B" class="wrong"> ul, ol, dl</label>
+          <label class="quiz-option"><input type="radio" name="q10" value="C" class="wrong"> table, thead, tbody</label>
+        </div>
+      </section>
+
+      <!-- Results Box (shown after label click) -->
+      <section id="results-box" class="lesson-card">
+        <h2 class="tag-title" style="color:#00ff00;">&gt; execution_complete</h2>
+        <div class="block">
+          <p class="kicker kicker-green">Results Output</p>
+          <p style="font-size: 18px;">Correct Answers: <span class="score-correct"></span> / 10</p>
+          <p style="font-size: 18px;">Incorrect Answers: <span class="score-incorrect"></span></p>
+        </div>
+      </section>
+
+      <!-- Label acting as a submit button -->
+      <label for="finish-quiz" class="btn-terminal">./submit_answers.sh</label>
+
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <p class="motto">html-review — a static-style tag reference</p>
+      <p class="motto">index · text · links · lists · tables · forms · media · semantic · metadata · quiz</p>
+    </div>
+  </footer>
+</body>
+</html>
